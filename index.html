@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="apple-touch-icon-precomposed" href="http://src.house.sina.com.cn/imp/imp/deal/a5/72/b/fd4168afb180f936bfcbc5632f0_p10_mk10.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://src.house.sina.com.cn/imp/imp/deal/78/dd/7/8012ae6bf7d31aa484dfc6d7155_p10_mk10.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://src.house.sina.com.cn/imp/imp/deal/a9/a3/7/b8b4c101e1d7779bef10160996b_p10_mk10.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://src.house.sina.com.cn/imp/imp/deal/d0/95/e/1c17afb925172613448ed3688d1_p10_mk10.png">
+    <link rel="icon" href="http://cache.house.sina.com.cn/esalesleju/mobile/leju_v1/favicon/logo.ico" type="image/x-icon" /> 
+    <title>ffbf翻牌子</title>
+    <link rel="stylesheet" href="orange/css/base.css" />
+    <link rel="stylesheet" href="orange/css/style.css" />
+    <link rel="stylesheet" href="orange/css/flipLottery.css" />
+    <link rel="stylesheet" href="orange/css/jquery.imageViewer.css" />
+    <style type="text/css">
+      div.d-once-btn {
+        display: none;
+      }
+      /* Try to hide image border */
+      a img{
+        border:none;
+      }
+      a {
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+        -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+        outline: none !important;
+      }
+      
+      .none {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body class="d-body">
+  <!--翻翻乐遮罩层-->
+  <div class="d-popup d-popup-share hidden" id="share-mask">
+  	  <img src="orange/images/wp.jpg">    <!--分享按键的弹出-->
+  </div>
+  <div class="ybwra d-ybwra">
+     <p class="d-top-msg">请美丽可爱开朗聪明的fjh女士翻牌子</p>
+      <!--翻翻乐中间翻牌-->
+     <div class="sport-box mt-10">
+          <!--活动提示信息-->
+          <!--{if $return}-->
+     	  <div class="d-tips-bg none">
+     	      <p>你已经翻完所有的牌子啦！</p>
+     	  </div>
+          <!--{/if}-->
+          <!--翻奖次数-->
+          <div class="d-number">
+              总共翻牌次数：<span>4</span>
+          </div>
+          <!--再玩一次按钮-->
+          <div class="d-once-btn">
+              <a class="d-oncemore" href="javascript:;" onclick="location.reload();">再翻一次嘛？</a>
+          </div>
+          <div class="sport-area">
+              <div class="sport-content">
+                  <div class="sport-content-view">
+                      <!--4个浮层-->
+                      <div class="d-column-box d-column-1">
+                      </div>
+                       <div class="d-column-box d-column-2">
+                      </div>
+                      <div class="d-column-box d-column-3">
+                      </div>
+                       <div class="d-column-box d-column-4">
+                      </div>
+                      <div class="img-show">
+                         <div class="bottom-img">
+                            <div class="img-view-box-in ">
+                              <p>
+                                恭喜您获得<br />
+                                <span class="img-win"><!--{$hb_award_info.name}--></span>
+                                <a href="#"><span class="img-msg">请在“我的翻翻乐”中领取奖品</span></a>
+                                <!--{if $is_fans!='yes'}-->
+                                <span class="img-tips">未关注者请先关注公众号</span>
+                                <!--{/if}-->
+                                <a class="d-oncemore" href="javascript:;" onclick="location.reload();">再玩一次</a><!--这里有两个按钮 要隐藏上面那个-->
+                              </p>
+                            </div>
+                         </div>
+                         <div class="popup-1">
+                         </div>
+                         <div class="popup-2">
+                         </div>
+                         <div class="popup-3">
+                         </div>
+                         <div class="popup-4">
+                         </div>
+                         <div class="img-box clearfix">
+                              <div class="img-view panel img-view-1" id="panel1"  data-cardIndex="1">
+                                  <div class="img-view-box front" >
+                                       <div class="img-view-box-in">
+                                          <a href="javascript:;"><img src="images/wp_q1.jpg" alt=""></a><!--左上覆盖层-->
+                                      </div>    
+                                  </div>
+                                  <div class="img-view-box back ">
+                                      <div class="img-view-box-in " >
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="img-view panel img-view-2" id="panel2"  data-cardIndex="2">
+                                  <div class="img-view-box front" >
+                                       <div class="img-view-box-in">
+                                          <a href="javascript:;"><img src="images/wp_q2.jpg" alt=""></a><!--右上覆盖层-->
+                                          <div class="d-icon-rightop"></div>
+                                      </div>    
+                                  </div>
+                                  <div class="img-view-box back">
+                                      <div class="img-view-box-in " >
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <div class="img-box clearfix">
+                              <div class="img-view panel img-view-3" id="panel1"  data-cardIndex="3">
+                                  <div class="img-view-box front" >
+                                       <div class="img-view-box-in">
+                                          <a href="javascript:;"><img src="images/wp_q3.jpg" alt=""></a><!--左下覆盖层-->
+                                      </div>    
+                                  </div>
+                                  <div class="img-view-box back ">
+                                      <div class="img-view-box-in " >
+                                      </div>
+                                  </div>
+                              </div>
+  
+                              <div class="img-view panel img-view-4" id="panel1"  data-cardIndex="4">
+                                  <div class="img-view-box front" >
+                                       <div class="img-view-box-in">
+                                          <a href="javascript:;"><img src="images/wp_q4.jpg" alt=""></a><!--右下覆盖层-->
+                                      </div>    
+                                  </div>
+                                  <div class="img-view-box back ">
+                                      <div class="img-view-box-in " >
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--刮奖ajax接口-->
+      <input id="ajaxUrl" type="hidden" value=""/>
+      <!--翻翻乐中间翻牌结束-->
+      <div class="d-btn clearfix">  
+          <div>
+              <a class="d-a1" href="#">💟樊嘉惠💟</a>
+          </div>
+          <!--{if $is_fans=='yes'}-->
+          <div>
+              <a class="d-a2" href="#">💟最美丽💟</a>
+          </div>
+          <!--{else}-->
+          <div class="none">
+              <a class="d-a2" href="#">关注公众号</a>
+          </div>
+          <!--{/if}-->
+      </div>
+      <div class="d-share">
+          <a href="#">本页面是fjh女士专属翻牌子系统，由Wind Pheasant定制！</a>
+      </div>
+      <p class="d-tips">
+          翻牌结果最终解释权归fjh女士所有
+      </p>
+  </div>
+  <script><!--刮奖后的图片-->
+  var adImages = ["orange/images/wp_h1.jpg", "orange/images/wp_h2.jpg", "orange/images/wp_h3.jpg", "orange/images/wp_h4.jpg",];
+  
+  // We assume the server response is something like this:
+  var ajaxResult = [
+    {"type":"image", "content": "orange/images/w1.jpg", "isWin": 0},
+    {"type":"image", "content": "orange/images/w1.jpg", "isWin": 0},
+    {"type":"image", "content": "orange/images/w1.jpg", "isWin": 0},
+    {"type":"image", "content": "orange/images/w1.jpg", "isWin": 0},
+    ];
+    
+  var pageConf = {
+      ajaxResult: ajaxResult,
+      adImages: adImages
+  };
+  </script>
+  <script src="zepto.min.js"></script>
+  <script src="imageViewer.js"></script>
+  <script src="flipLottery2.js"></script>
+  </body>
+</html>
